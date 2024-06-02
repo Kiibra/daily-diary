@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # Add the CreateView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Diary
 
 
@@ -25,4 +25,13 @@ def diary_detail(request, diary_id):
 class DiaryCreate(CreateView):
   model = Diary
   fields = ['title', 'content']
+  success_url = '/diaries/'
+
+class DiaryUpdate(UpdateView):
+  model = Diary
+  # Let's disallow the renaming of a diary by excluding the name field!
+  fields = ['title', 'content']
+
+class DiaryDelete(DeleteView):
+  model = Diary
   success_url = '/diaries/'
