@@ -1,4 +1,6 @@
 from django.shortcuts import render
+# Add the CreateView
+from django.views.generic.edit import CreateView
 from .models import Diary
 
 
@@ -19,3 +21,7 @@ def diary_index(request):
 def diary_detail(request, diary_id):
   diary = Diary.objects.get(id=diary_id)
   return render(request, 'diaries/detail.html', { 'diary': diary })
+
+class DiaryCreate(CreateView):
+  model = Diary
+  fields = ['title', 'content']
