@@ -6,4 +6,6 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     # route for diaries index
     path('diaries/', views.diary_index, name='diary-index'),
+    # new route for details 
+    path('diaries/<int:diary_id>/', views.diary_detail, name='diary-detail'),
 ]
