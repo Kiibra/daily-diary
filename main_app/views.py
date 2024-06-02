@@ -1,14 +1,12 @@
 from django.shortcuts import render
-# Add the HttpResponse
-from django.http import HttpResponse
 from .models import Diary
 
 
 class Diary:  # Note that parens are optional if not inheriting from another class
   def __init__(self, created_at, title, content, updated_at):
-    self.created_at = created_at
     self.title = title
     self.content = content
+    self.created_at = created_at
     self.updated_at = updated_at
 
 diaries = [
@@ -21,7 +19,6 @@ diaries = [
 
 # Define the home view
 def home(request):
-  # return HttpResponse('<h1>Welcome to Daily Diary! 🦋</h1>')
   return render(request, 'home.html')
 
 # Define the About view
@@ -30,4 +27,5 @@ def about(request):
 
 # Add new view
 def diary_index(request):
+  # diaries = Diary.objects.all()
   return render(request, 'diaries/index.html', { 'diaries': diaries })
