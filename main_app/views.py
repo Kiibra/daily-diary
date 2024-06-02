@@ -11,4 +11,4 @@ def home(request):
 
 # Define the About view
 def about(request):
-  return HttpResponse('<h1>About Daily Diary 🦋</h1>')
+    return render(request, 'about.html')
