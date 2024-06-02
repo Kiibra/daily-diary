@@ -28,7 +28,11 @@
   </div>
     <div class="entry-container">
       <p>{{ diary.content }}</p>
-    </div>
+  </div>
+  <div class="diary-actions">
+    <a href="{% url 'diary-update' diary.id %}" class="edit-btn">Edit</a>
+    <a href="{% url 'diary-delete' diary.id %}" class="delete-btn">Delete</a>
+  </div>
 </section>
 
 {% endblock %}
