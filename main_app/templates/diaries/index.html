@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/diaries/diary-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1> Diaries 🦋</h1>
+</section>
+
+<section class="card-container">
+  {% for diary in diaries %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          <img 
+            src="{% static 'images/header-colored.png' %}" 
+            alt="A logo colored"
+          >
+        </div>
+        <p>{{ diary.created_at }}</p>
+        <h2 class="card-title"> Title: {{ diary.title }}</h2>
+        <p class="content-container"><small>{{ diary.content }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
