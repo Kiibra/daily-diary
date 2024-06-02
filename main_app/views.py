@@ -1,9 +1,10 @@
 from django.shortcuts import render
 # Add the HttpResponse
 from django.http import HttpResponse
+from .models import Diary
 
 
-class Dairy:  # Note that parens are optional if not inheriting from another class
+class Diary:  # Note that parens are optional if not inheriting from another class
   def __init__(self, created_at, title, content, updated_at):
     self.created_at = created_at
     self.title = title
@@ -11,8 +12,8 @@ class Dairy:  # Note that parens are optional if not inheriting from another cla
     self.updated_at = updated_at
 
 diaries = [
-  Dairy('06/01/2024', 'thoughts', 'today i am learning and building my first django app.', '06/01/2024' ),
-  Dairy('05/20/2014', 'my day', 'today was such a rainy and sad day. I stayed in all day!', '05/31/2024' ),
+  Diary('06/01/2024', 'thoughts', 'today i am learning and building my first django app.', '06/01/2024' ),
+  Diary('05/20/2014', 'my day', 'today was such a rainy and sad day. I stayed in all day!', '05/31/2024' ),
 ]
 
 
@@ -20,7 +21,8 @@ diaries = [
 
 # Define the home view
 def home(request):
-  return HttpResponse('<h1>Welcome to Daily Diary! 🦋</h1>')
+  # return HttpResponse('<h1>Welcome to Daily Diary! 🦋</h1>')
+  return render(request, 'home.html')
 
 # Define the About view
 def about(request):
