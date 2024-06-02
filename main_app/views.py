@@ -7,4 +7,8 @@ from django.http import HttpResponse
 
 # Define the home view
 def home(request):
-  return HttpResponse('<h1>Welcome to your Daily Diaries 🦋</h1>')
+  return HttpResponse('<h1>Welcome to Daily Diary! 🦋</h1>')
+
+# Define the About view
+def about(request):
+  return HttpResponse('<h1>About Daily Diary 🦋</h1>')
