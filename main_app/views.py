@@ -25,3 +25,4 @@ def diary_detail(request, diary_id):
 class DiaryCreate(CreateView):
   model = Diary
   fields = ['title', 'content']
+  success_url = '/diaries/'
