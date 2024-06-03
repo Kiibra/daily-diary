@@ -1,24 +1,45 @@
 .card-container {
   padding: 0 30px;
   justify-content: center;
+  flex-direction: row;
   /* flex-wrap: wrap; */
 }
 
 .card {
-  width: 80%;
+  width: 100%;
   /* max-height: 60px; */
   margin: 10px;
   border: black;
   box-shadow: blue;
 }
 
+.bookmark {
+  height: 70px;
+  width: 60px;
+  /* background-color: rgb(88, 88, 212); */
+  /* border: 2px; */
+  border: 2px solid rgb(198, 182, 182);
+  /* display: flex; */
+}
+
+.bookmark a {
+  color: rgb(34, 36, 37);
+  text-decoration: none;
+  
+}
+
+.bookmark:hover {
+  background-color: rgb(245, 162, 8);
+  color: aliceblue;
+}
+
 .card-content {
   padding: 10px;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 20px;
+  /* justify-content: space-around; */
+  flex-direction:row;
+  gap: 30px;
   flex-wrap: wrap;
   border-color: aquamarine;
   border: 2px solid;
@@ -27,10 +48,12 @@
 .content-container > p:first-child{
   overflow: hidden;
   visibility: visible;
+  display: flex;
 }
 
 .card-img-container img {
   height: 40px;
+  /* display: flex; */
 }
 
 .card h2 {
