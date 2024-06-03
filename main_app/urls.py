@@ -13,4 +13,6 @@ urlpatterns = [
     # Add the new routes for update and delete
     path('diaries/<int:pk>/update/', views.DiaryUpdate.as_view(), name='diary-update'),
     path('diaries/<int:pk>/delete/', views.DiaryDelete.as_view(), name='diary-delete'),
+    # New url pattern below
+    path('accounts/signup/', views.signup, name='signup'),
 ]
