@@ -8,8 +8,11 @@ main {
 
 .diary-container img {
   width: 440px;
-  /* margin-top: 10%; */
-  /* margin: 0 auto; */
+  margin-left:  40px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main > section {
@@ -39,9 +42,7 @@ main > section {
   }
 }
 
-.logo-container {
-  max-width: 375px;
-}
+
 
 .diary-container {
   width: 80%;
@@ -83,7 +84,20 @@ main > section {
   align-self: flex-end;
   margin-right: 0;
   margin-top: 16px;
-  font-size: 14px;
-  background-color: rgb(120, 149, 236);
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
 
+.btn {
+  background-color: #6558f5;
+}
+
+.submit {
+  background-color: #277ac3;
+}
+
+.btn a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
