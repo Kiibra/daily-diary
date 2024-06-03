@@ -19,7 +19,9 @@ def about(request):
     return render(request, 'about.html')
 
 def diary_index(request):
-  diaries = Diary.objects.all()
+  # Diaries = Diaries.objects.filter(user=request.user)
+  # diaries = Diary.objects.all()
+  diaries = request.user.diary_set.all()
   return render(request, 'diaries/index.html', { 'diaries': diaries })
 
 def diary_detail(request, diary_id):
