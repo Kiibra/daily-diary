@@ -2,11 +2,21 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* margin: auto; */
+  /* padding-top: 20px; */
 }
 
-.page-header img {
+.page-header {
+  /* background-color: rgb(236, 239, 239); */
+  display: grid;
+  width: 100%;
+  margin: 0 auto ;
+
+}
+.page-header h1 {
   height: 50px;
-  margin-left: 20px;
+  /* margin-left: 14px; */
+  font-size: 30px;
 }
 
 table {
@@ -17,10 +27,10 @@ table {
 
 th {
   text-align: left;
-  padding: 6px 20px 0 0;
+  padding: 6px 10px 0 0;
   font-weight: normal;
   vertical-align: top;
-  font-size: var(--font-reg);
+  font-size: 18px;
 }
 
 td {
@@ -28,17 +38,25 @@ td {
 }
 
 td > * {
+  height: 30px;
   width: 100%;
   padding: 2px 4px;
-  font-size: var(--font-l);
+  font-size: 14px;
 }
 
 td > textarea {
-  height: calc(4 * var(--font-l) + 8px);
+  height: calc(4 * 12px + 8px);
   font-family: inherit;
 }
 
 .btn {
   align-self: flex-end;
   margin-right: 40px;
+  min-width: 16%;
+  max-width: 64%;
+  /* margin: 0 auto; */
+  border-radius: 8px;
+  background-color: rgb(213, 204, 221);
+  background-color: #6558f5;
+  color: rgb(255, 255, 255);
 }
