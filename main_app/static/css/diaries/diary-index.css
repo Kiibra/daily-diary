@@ -9,8 +9,8 @@
   width: 100%;
   /* max-height: 60px; */
   margin: 10px;
-  border: black;
-  box-shadow: blue;
+  border:3px solid rgb(224, 206, 206);
+  /* box-shadow: blue; */
 }
 
 .bookmark {
@@ -18,8 +18,9 @@
   width: 60px;
   /* background-color: rgb(88, 88, 212); */
   /* border: 2px; */
-  border: 2px solid rgb(198, 182, 182);
+  border: 1px rgb(198, 182, 182);
   /* display: flex; */
+  background-color: rgb(205, 159, 74);
 }
 
 .bookmark a {
@@ -29,7 +30,7 @@
 }
 
 .bookmark:hover {
-  background-color: rgb(245, 162, 8);
+  background-color: rgb(246, 163, 10);
   color: aliceblue;
 }
 
@@ -42,7 +43,7 @@
   gap: 30px;
   flex-wrap: wrap;
   border-color: aquamarine;
-  border: 2px solid;
+  /* border: 2px solid; */
 }
 
 .content-container > p:first-child{

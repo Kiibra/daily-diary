@@ -28,6 +28,7 @@ body {
   min-height: 100vh;
   --nav-bg: rgba(229, 226, 232, 0.7);
   --nav-bg-ff: rgba(194, 183, 202, 0.9);
+  background-color: #b2acfa;
 }
 
 nav {
@@ -69,8 +70,8 @@ nav li {
 
 .header-logo-container {
   margin: auto;
-  /* padding: 10px 20px 0; */
-  max-width: 500px;
+  padding: 10px 20px 0;
+  max-width: 400px;
 }
 
 .page-content {
@@ -85,6 +86,12 @@ nav li {
 .page-header img {
   height: 50px;
 }
+
+.header-logo-container img {
+  width: 106px;
+  height: 60px;
+}
+
 @media only screen and (min-width: 758px) {
   header {
     position: sticky;
@@ -115,21 +122,15 @@ nav li {
   }
 
   .header-logo-container {
-    width: 213px;
+    /* width: 100px; */
   }
 
   .page-header h1 {
     font-size: large;
+    display: flex;
   }
 
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header {
-      background: var(--nav-bg);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-    }
-  }
-}
+} 
 
 @media only screen and (min-width: 1024px) {
   main {
@@ -158,8 +159,10 @@ nav li {
   .header-logo-container img{
     /* visual fix to help align logo */
     padding-bottom: 6px;
-    width: 206px;
-    height: 35px;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
   }
 
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -168,11 +171,25 @@ nav li {
       backdrop-filter: none;
     }
 
-    nav,
-    .header-logo-container {
+    nav {
       background: #e0defd;
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
   }
+}
+
+.btn {
+  font-size: var(--font-l);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  text-decoration: none;
+  background-color: var(--button-bg);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  margin-right: 10px;
+  width: 100%;
 }

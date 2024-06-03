@@ -6,6 +6,12 @@ main {
   height: 100%;
 }
 
+.diary-container img {
+  width: 440px;
+  /* margin-top: 10%; */
+  /* margin: 0 auto; */
+}
+
 main > section {
   width: 100%;
   padding: 10px 8px;
@@ -31,4 +37,53 @@ main > section {
   .logo-container {
     max-width: 520px;
   }
+}
+
+.logo-container {
+  max-width: 375px;
+}
+
+.diary-container {
+  width: 80%;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-color: rgb(243, 242, 240);
+  padding: 15px;
+}
+
+.login h1 {
+  font-size: clamp(3.2rem, 3vw, 4.8rem);
+  margin: 10px 0;
+}
+
+.login > p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 14px 0 0px;
+}
+
+.login label {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.login input {
+  font-size: 20px;
+  padding: 2px 4px;
+}
+
+.login .btn {
+  align-self: flex-end;
+  margin-right: 0;
+  margin-top: 16px;
+  font-size: 14px;
+  background-color: rgb(120, 149, 236);
+
 }
