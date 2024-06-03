@@ -1,14 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 # Add the CreateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Diary
+from django.contrib.auth.views import LoginView
 
 
 # Create your views here.
 
 # Define the home view
-def home(request):
-  return render(request, 'home.html')
+class Home(LoginView):
+  template_name = 'home.html'
 
 # Define the About view
 def about(request):
@@ -35,3 +36,4 @@ class DiaryUpdate(UpdateView):
 class DiaryDelete(DeleteView):
   model = Diary
   success_url = '/diaries/'
+

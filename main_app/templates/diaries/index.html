@@ -17,9 +17,14 @@
 
 <section class="card-container">
   {% for diary in diaries %}
-    <div class="card">
-      <a href="{% url 'diary-detail' diary.id %}">
-        <div class="card-content">
+  <div class="card">
+    <a href="{% url 'diary-detail' diary.id %}">
+      <div class="card-content">
+        <a href="#" class="bookmark-btn"> 
+          <div class="bookmark">
+            <p>Add Bookmark</p>
+          </div>
+        </a>
           <div class="card-img-container">
             <img 
             src="{% static 'images/header-colored.png' %}" 
@@ -32,7 +37,7 @@
         </div>
       </a>
     </div>
-  {% endfor %}
+    {% endfor %}
 </section>
 
 {% endblock %}
