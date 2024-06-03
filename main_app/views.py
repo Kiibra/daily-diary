@@ -26,7 +26,15 @@ def diary_detail(request, diary_id):
 class DiaryCreate(CreateView):
   model = Diary
   fields = ['title', 'content']
-  success_url = '/diaries/'
+  
+  # This inherited method is called when a
+  # valid diary form is being submitted
+  def form_valid(self, form):
+    # Assign the logged in user (self.request.user)
+    form.instance.user = self.request.user  # form.instance is the diary
+    # Let the CreateView do its job as usual
+    return super().form_valid(form)
+
 
 class DiaryUpdate(UpdateView):
   model = Diary
