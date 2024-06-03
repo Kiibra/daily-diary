@@ -120,11 +120,7 @@ nav li {
   nav ul {
     flex-wrap: nowrap;
   }
-
-  .header-logo-container {
-    /* width: 100px; */
-  }
-
+  
   .page-header h1 {
     font-size: large;
     display: flex;
@@ -180,14 +176,11 @@ nav li {
 }
 
 .btn {
-  font-size: var(--font-l);
+  font-size: 20px;
   padding: 8px 16px;
-  border-radius: 6px;
-  border-width: 2px;
-  border-style: solid;
+  border-radius: 18px;
+  border-style: none;
   text-decoration: none;
-  background-color: var(--button-bg);
-  font-weight: 600;
   cursor: pointer;
   font-family: inherit;
   margin-right: 10px;
