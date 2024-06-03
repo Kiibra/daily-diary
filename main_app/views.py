@@ -37,6 +37,7 @@ def diary_detail(request, diary_id):
 class DiaryCreate(LoginRequiredMixin, CreateView):
   model = Diary
   fields = ['title', 'content']
+  success_url = '/diaries/' 
   
   # This inherited method is called when a
   # valid diary form is being submitted
