@@ -70,6 +70,7 @@ nav li {
   margin: auto;
   padding: 10px 20px 0;
   max-width: 400px;
+  display: flex;
 }
 
 .page-content {
@@ -89,9 +90,15 @@ nav li {
   font-size: larger;
 }
 
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .header-logo-container img {
-  width: 106px;
-  height: 60px;
+  width: 80px;
+  height: 40px;
 }
 
 .btn {
@@ -142,7 +149,7 @@ nav li {
   margin: 0;
 }
 
-@media only screen and (min-width: 758px) {
+@media only screen and (min-width: 400px) {
   header {
     position: sticky;
     display: flex;
@@ -205,8 +212,8 @@ nav li {
   .header-logo-container img{
     /* visual fix to help align logo */
     padding-bottom: 6px;
-    width: 80px;
-    height: 40px;
+    width: 100px;
+    height: 80px;
     display: flex;
     flex-direction: row;
   }
