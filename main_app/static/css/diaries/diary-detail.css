@@ -1,45 +1,73 @@
 section {
   padding: 8px 10px;
-  background-color: antiquewhite;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
-}
-
-.diary-container {
-  justify-content: space-between;
-  display: flex;
-}
-
-.entry-container {
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgb(233, 216, 203);
-}
-
-.diary-img > img{
-  width: 25%;
-  max-width: 80px;
-}
-
-.diary-details {
-  width: 98%;
-}
-
-.diary-actions {
   margin-top: 20px;
 }
 
-.diary-details h1 {
+.content-container {
+  background-color: rgb(205, 225, 237);
+  font-size: 14px;
+  font-variant: normal;
+  line-height: 32px;   /* within paragraph */
+  margin-bottom: 30px; /* between paragraphs */
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+p {
+  background-color: aliceblue;
+}
+
+.diary-img > img{
+  width: 20%;
+  height: 60px;
+}
+
+.actions{
+  margin-bottom: 0;
+  height: 20px;
+}
+
+.actions img{
+  text-decoration: none;
+  width: 40px;
+  height: 30px;
+  margin-bottom: 0;
+  margin-right: 10px;
+  flex-direction: row;
+}
+
+.top-half {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.top-half h1 {
   font-size: 20px;
-  margin: 15px 0 3px;
+  margin: 20px 0 20px;
 }
 
 .diary-details p {
-  font-size: 12px;
-  margin: 5px 0;
+  background-color: aliceblue;
+  font-size: 14px;
+  margin: 5px 0 16px;
+  padding-left: 10px;
+  width: 26%;
+  height: 4vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.dates {
+  margin-top: 30px;
 }
 
 @media only screen and (min-width: 768px) {
