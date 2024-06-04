@@ -12,9 +12,10 @@
     <h1>Edit {{ diary.title }}</h1>
   {% else %}
     <h1>Add a Diary</h1>
-  {% endif %}
+    {% endif %}
   <img src="{% static 'images/header-colored.png' %}" alt="A DD logo"/>
 </div>
+<hr />
 {% comment %} 
   Leaving the action empty makes the form post to the same url used to display it
 {% endcomment %}
