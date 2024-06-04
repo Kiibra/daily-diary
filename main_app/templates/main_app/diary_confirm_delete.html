@@ -4,20 +4,22 @@
 {% block content %}
 
 <div class="page-header">
-  <h1>Delete Diary?</h1>
+  <h1 class="conf-quest">Delete Diary ?</h1>
   <img src="{% static 'images/header-colored.png' %}" alt="DD logo"/>
 </div>
-<h2>Are you sure you want to delete {{diary.title}}?</h2>
+<hr />
+<h2>Are you sure you want to delete the dairy: {{diary.title}}?</h2>
 
 <form action="" method="post" class="form">
   {% csrf_token %}
-  <a 
-    href="{% url 'diary-detail' diary.id %}" 
-    class="btn secondary"
-  >
-    Cancel
-  </a>
-  <button type="submit" class="delete-btn">Delete 🗑️</button>
+  <div class="secondary-actions">
+    <button class="cancel-btn"><a href="{% url 'diary-detail' diary.id %}" 
+      > 
+      Cancel
+    </a> 
+    </button>
+    <button type="submit" class="delete-btn">Delete 🗑️</button>
+  </div>
 </form>
 
 {% endblock %}
