@@ -7,6 +7,8 @@
   type="text/css"
   href="{% static 'css/diaries/diary-index.css' %}"
 />
+<link href="https://css.gg/css?=|bookmark" rel="stylesheet">
+
 {% endblock %}
 
 {% block content %}
@@ -18,27 +20,29 @@
 
 <section class="card-container">
   {% for diary in diaries %}
-  <div class="card">
-    <a href="{% url 'diary-detail' diary.id %}">
-      <div class="card-content">
-        <a href="#" class="bookmark-btn"> 
-          <div class="bookmark">
-            <p>Add to Bookmark</p>
-          </div>
-        </a>
-          <div class="card-img-container">
-            <img 
-            src="{% static 'images/header-colored.png' %}" 
-            alt="DD logo"
-            >
-          </div>
-          <h2 class="card-title">{{ diary.title }}</h2>
-          <p>Created: {{ diary.created_at }}</p>
-          <p>{{ diary.content }}</p>
+    <div class="card">
+      <a href="#" class="bookmark-btn"> 
+        <div class="bookmark">
+          <p></p>
         </div>
+      </a> 
+      <a href="{% url 'diary-detail' diary.id %}">
+        <div class="card-content">
+            <div class="card-img-container">
+              <img 
+              src="{% static 'images/header-colored.png' %}" 
+              alt="DD logo"
+              >
+            </div>
+            <div class="top-con">
+              <p>{{ diary.created_at }}</p>
+              <h2 class="card-title">{{ diary.title }}</h2>
+            </div>
+          </div>
+          <p id="d-content">{{ diary.content }}</p>
       </a>
     </div>
-    {% endfor %}
+  {% endfor %}
 </section>
 
 {% endblock %}
