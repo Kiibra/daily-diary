@@ -13,7 +13,6 @@
 
 <section >
   <div class="diary-container">
-
     <div class="diary-img">
       <img 
       src="{% static 'images/header-colored.png' %}" 
@@ -21,18 +20,23 @@
       >
     </div>
     <div class="diary-details">
-      <h1 class="card-title">{{ diary.title }}</h1>
-      <p>Created: {{ diary.created_at }}</p>
-      <p>Last Updated: {{ diary.updated_at }}</p>
+      <div class="top-half">
+        <h1 class="card-title">Topic: {{ diary.title }}</h1>
+        <div class="actions">
+          <a href="{% url 'diary-update' diary.id %}" class="edit-btn"><img src="{% static 'images/edit.svg' %}" alt="edit icon"></a>
+          <a href="{% url 'diary-delete' diary.id %}" class="delete-btn"><img src="{% static 'images/delete.svg' %}" alt="delete icon"></a>
+        </div>
+      </div>
+      <hr />
+      <div class="dates">
+        <p>Created: {{ diary.created_at }}</p>
+        <p>Last Updated: {{ diary.updated_at }}</p>
+      </div>
     </div>
   </div>
-    <div class="entry-container">
-      <p>{{ diary.content }}</p>
-  </div>
-  <div class="diary-actions">
-    <a href="{% url 'diary-update' diary.id %}" class="edit-btn">Edit</a>
-    <a href="{% url 'diary-delete' diary.id %}" class="delete-btn">Delete</a>
-  </div>
+</section>
+<section class="content-container">
+  <p>{{ diary.content }}</p>
 </section>
 
 {% endblock %}

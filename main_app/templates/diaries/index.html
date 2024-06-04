@@ -7,7 +7,6 @@
   type="text/css"
   href="{% static 'css/diaries/diary-index.css' %}"
 />
-<link href="https://css.gg/css?=|bookmark" rel="stylesheet">
 
 {% endblock %}
 
@@ -31,7 +30,7 @@
           </div>
           <div class="top-con">
             <p>{{ diary.created_at }}</p>
-            <h2 class="card-title">{{ diary.title }}</h2>
+            <h2 class="card-title">Topic: {{ diary.title }}</h2>
           </div>
         </div>
         <p class="d-content">{{ diary.content }}</p>
