@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 class Diary(models.Model):
   title = models.CharField(max_length=100)
-  content = models.TextField(max_length=500)
+  content = models.TextField(max_length=None)
   created_at = models.DateField(auto_now_add=True)
   updated_at = models.DateField(auto_now=True)
 
