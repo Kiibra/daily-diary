@@ -83,11 +83,14 @@ nav li {
   margin-left: 10px;
 }
 
-.page-header {
+.page-header{
   display: flex;
-  align-items: center;
   margin: 30px 30px 0 0px;
-  font-size: larger;
+}
+
+.signup-header {
+  margin: 30px 30px 0 0px;
+  font-size: 22px;
 }
 
 .header {
