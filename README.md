@@ -10,7 +10,7 @@ Introducing Daily Diary App – your personal space for capturing life's moments
 
 ***
 
-# [Use Daily DiaryDiary 🦋 ]() 
+# [Use Daily DiaryDiary 🦋 ](https://daily-diary-kb.fly.dev/) 
 ***
 
 ### `Technologies`
