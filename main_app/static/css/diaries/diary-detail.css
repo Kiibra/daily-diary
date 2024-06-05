@@ -22,7 +22,8 @@ p {
   background-color: aliceblue;
 }
 
-.diary-img > img{
+.diary-img img{
+  flex-direction: column;
   width: 20%;
   height: 60px;
 }
